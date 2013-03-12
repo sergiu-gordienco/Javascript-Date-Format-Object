@@ -25,3 +25,37 @@ An PHP class That allows you to build very complicate queries in a very easy mod
 > ```
 > so we will use `__db()->...` insead of `global $db;$db->...`
 
+### Simple Queries
+
+#### Select Query
+
+> ```php
+> 	$_db->select(
+> 		'tbl_users'	=> 'users',
+> 		array(
+> 			'tbl_users.id'	=> 33,
+> 			'tbl_users.type'	=> 'client'
+> 		),
+> 		array(
+> 			'id'	=> 'tbl_users.id',
+> 			'name'	=> 'tbl_users.name',
+> 			'type'	=> 'tbl_users.type'
+> 		),
+> 		"LIMIT 0 , 5");
+> ```
+> 
+> ##### Result Query
+> 
+> ```sql
+> 	SELECT
+> 		`your-db-name`.`tbl_users`.`id` as `id`,
+> 		`your-db-name`.`tbl_users`.`name` as `name`,
+> 		`your-db-name`.`tbl_users`.`type` as `type`
+> 		FROM
+> 			`your-db-name`.`users` AS `tbl_users`
+> 	WHERE
+> 		`tbl_users`.`id` = "33"
+> 		AND
+> 		`tbl_users`.`type` = "client"
+> 	LIMIT 0 , 5
+> ```
