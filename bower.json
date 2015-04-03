@@ -1,0 +1,9 @@
+{
+  "name"   : "javascript-date-format-object",
+  "version": "1.0.0",
+  "main"   : "m_date.js",
+  "ignore" : [
+    ".jshintrc",
+    "**/*.txt"
+  ]
+}
