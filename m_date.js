@@ -1,3 +1,13 @@
+;((function () {
+	if (typeof(String.prototype.subs) !== "function") {
+		String.prototype.subs	= function(p,i) {
+			if(p < 0) return this.substring(this.length+p,( typeof(i) == "number" ? this.length+p+i : this.length ));
+			if((i === 0 || i < 0) && p >=0) return this.substring(p,this.length+i);
+			if(!i)	return this.substring(0,p);
+			return this.substring(p,p+i);
+		}
+	}
+})());
 var m_date = function(t){
 	if(this == window) return new m_date(t);
 	this.time0 = new Date();
