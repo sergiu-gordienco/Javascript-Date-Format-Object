@@ -9,7 +9,11 @@
 	}
 })());
 var m_date = function(t){
-	if(this == window) return new m_date(t);
+	var global	= global || undefined;
+	if (typeof(window) === "object") {
+		global	= window;
+	}
+	if(this == global) return new m_date(t);
 	this.time0 = new Date();
 	this.time = t ? new Date(t) : new Date();
 	this.days = 'Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday'.split('|');
@@ -76,3 +80,7 @@ var m_date = function(t){
 	}
 	return this;
 };
+
+if (typeof(module) === "object" && module) {
+	module.exports	= m_date;
+}
