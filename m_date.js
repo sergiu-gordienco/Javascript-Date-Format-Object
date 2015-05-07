@@ -9,8 +9,10 @@
 	}
 })());
 var m_date = function(t){
-	var global	= global || undefined;
-	if (typeof(window) === "object") {
+	if (typeof(global) === "undefined") {
+		var global	= undefined;
+	}
+	if (!global && typeof(window) === "object") {
 		global	= window;
 	}
 	if(this == global) return new m_date(t);

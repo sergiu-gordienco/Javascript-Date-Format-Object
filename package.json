@@ -1,0 +1,28 @@
+{
+  "name": "datetime-format",
+  "version": "1.0.3",
+  "description": "Date and Time - Formatting a date or time in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiu-gordienco/Javascript-Date-Format-Object.git"
+  },
+  "keywords": [
+    "date format",
+    "datetime",
+    "time",
+    "date",
+    "datetime format",
+    "time format"
+  ],
+  "author": "Sergiu Gordienco <sergiu.gordienco@gmail.com> (http://www.cloudwebcode.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiu-gordienco/Javascript-Date-Format-Object/issues"
+  },
+  "homepage": "https://github.com/sergiu-gordienco/Javascript-Date-Format-Object",
+  "dependencies"	: {}
+}
